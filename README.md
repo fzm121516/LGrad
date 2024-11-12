@@ -1,3 +1,17 @@
+
+sh ./my.sh 0 /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/ForenSynths8test/ForenSynths/ /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/LGrad/foren8
+
+
+cd CNNDetection
+
+CUDA_VISIBLE_DEVICES=0 python eval_test8gan.py --model_path ./LGrad-4class-Trainon-Progan_car_cat_chair_horse.pth  --dataroot /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/LGrad/foren8/test --batch_size 128
+
+
+
+sh ./my2.sh 1 /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/UniversalFakeDetect/ /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/LGrad/unifd
+
+
+
 # Learning on Gradients: Generalized Artifacts Representation for GAN-Generated Images Detection
 
 <p align="center">
