@@ -12,6 +12,12 @@ sh ./my2.sh 1 /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/UniversalFakeDet
 
 CUDA_VISIBLE_DEVICES=2 python eval_testunifd.py --model_path ./LGrad-4class-Trainon-Progan_car_cat_chair_horse.pth  --dataroot /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/LGrad/unifd/test --batch_size 128
 
+
+sh ./my3.sh 1 /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/Diffusion1kStep/ /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/LGrad/d1k
+
+CUDA_VISIBLE_DEVICES=2 python eval_testd1k.py --model_path ./LGrad-4class-Trainon-Progan_car_cat_chair_horse.pth  --dataroot /home/fanzheming/zm/NPR-DeepfakeDetection/dataset/LGrad/d1k/test --batch_size 128
+
+
 # Learning on Gradients: Generalized Artifacts Representation for GAN-Generated Images Detection
 
 <p align="center">
