@@ -35,7 +35,7 @@ def normlize_np(img):
     return img * 255.                
 
 def get_imglist(path):
-    ext = [".jpg",".bmp",".png",".jpeg",".JPEG",".webp"]   # Add image formats here
+    ext = [".jpg",".bmp",".png",".jpeg",".JPEG",".webp",".PNG"]   # Add image formats here
     files = []
     [files.extend(glob(os.path.join(path, f'*{e}'))) for e in ext]
     return sorted(files)
